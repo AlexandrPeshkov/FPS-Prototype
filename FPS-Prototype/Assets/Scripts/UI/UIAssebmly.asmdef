@@ -1,6 +1,6 @@
 {
-    "name": "CoreAssembly",
-    "rootNamespace": "FPSPrototype.Core",
+    "name": "UIAssebmly",
+    "rootNamespace": "FPSPrototype.UI",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

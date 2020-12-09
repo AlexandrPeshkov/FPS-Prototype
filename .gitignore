@@ -352,12 +352,12 @@ FPS-Prototype/.vs/FPS-Prototype/v16
 FPS-Prototype/.vs/FPS-Prototype/config
 
 #solutions
-#/FPS-Prototype/FPS-Prototype.sln
+/FPS-Prototype/FPS-Prototype.sln
 
 #projects
 /FPS-Prototype/*.csproj.user
-/FPS-Prototype/AssetsAssembly.csproj
-/FPS-Prototype/AssetsAssembly.Editor.csproj
+/FPS-Prototype/UIAssembly.csproj
+/FPS-Prototype/CoreAssembly.csproj
 
 /FPS-Prototype/Assets.EditModeTests.csproj
 /FPS-Prototype/Assets.PlayModeTests.csproj

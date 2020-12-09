@@ -8,11 +8,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>FPSPrototype.Core</RootNamespace>
-    <ProjectGuid>{E04021FD-BA25-A56A-B2B3-319072FEB52F}</ProjectGuid>
+    <RootNamespace>FPSPrototype.UI</RootNamespace>
+    <ProjectGuid>{13E84DA0-71E6-D32E-8DA6-76C69BE83F82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>CoreAssembly</AssemblyName>
+    <AssemblyName>UIAssebmly</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -56,10 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Scripts\CoreAssembly.asmdef" />
+     <None Include="Assets\Scripts\UI\UIAssebmly.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0b14\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
