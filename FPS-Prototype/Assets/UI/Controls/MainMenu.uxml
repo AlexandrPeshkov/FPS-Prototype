@@ -5,10 +5,10 @@
             <ui:Label text="FPS Prototype&#10;" display-tooltip-when-elided="true" style="font-size: 100%; -unity-text-align: middle-center; -unity-font: resource(&apos;FlatSkin/Font/Roboto-Regular&apos;); color: rgb(178, 178, 178); justify-content: center; align-items: center; width: 100%; height: 90%;" />
         </ui:VisualElement>
         <ui:VisualElement name="menu-container" style="height: 85%; align-items: center; justify-content: center; flex-basis: auto; flex-grow: 0;">
-            <ui:Button text="Connect to host" display-tooltip-when-elided="true" name="menu-button" class="menu-button" style="font-size: 60%; white-space: nowrap; align-items: center; justify-content: center; flex-basis: 15%;" />
-            <ui:Button text="Create host&#10;" display-tooltip-when-elided="true" name="menu-button" class="menu-button" style="width: 508px; height: 170px; font-size: 60%;" />
-            <ui:Button text="Settings&#10;" display-tooltip-when-elided="true" name="menu-button" class="menu-button" style="width: 508px; height: 170px; font-size: 60%;" />
-            <ui:Button text="Exit&#10;" display-tooltip-when-elided="true" name="menu-button" class="menu-button" style="width: 508px; height: 170px; font-size: 60%;" />
+            <ui:Button text="Connect to host" display-tooltip-when-elided="true" name="menu-button-connect" class="menu-button" style="font-size: 60%; white-space: nowrap; align-items: center; justify-content: center; flex-basis: 15%;" />
+            <ui:Button text="Create host&#10;" display-tooltip-when-elided="true" name="menu-button-create" class="menu-button" style="width: 508px; height: 170px; font-size: 60%;" />
+            <ui:Button text="Settings&#10;" display-tooltip-when-elided="true" name="menu-button-settings" class="menu-button" style="width: 508px; height: 170px; font-size: 60%;" />
+            <ui:Button text="Exit&#10;" display-tooltip-when-elided="true" name="menu-button-exit" class="menu-button" style="width: 508px; height: 170px; font-size: 60%;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

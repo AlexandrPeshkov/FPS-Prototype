@@ -1,22 +1,56 @@
+using FPSPrototype.Core.Common.Attrubutes;
+using FPSPrototype.Core.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace FPSPrototype.UI
 {
-    public class MainMenu : MonoBehaviour
+    /// <summary>
+    /// Game main menu controller
+    /// </summary>
+    [RequireComponent(typeof(UIDocument))]
+    public class MainMenu : BaseUIBehaviour
     {
-        [Header("Menu buttons")]
-        [SerializeField]
-        private Button exitButton;
+        //menu buttons
+        [UCSS("menu-button-connect")]
+        private Button _connectButton;
 
-        private void Awake()
+        [UCSS("menu-button-create")]
+        private Button _createHostButton;
+
+        [UCSS("menu-button-settings")]
+        private Button _settingsButton;
+
+        [UCSS("menu-button-exit")]
+        private Button _exitButton;
+
+        private void OnEnable()
         {
-            exitButton.clicked += OnExitClick;
+            _connectButton.clicked += OnConnectButtonClick;
+            _createHostButton.clicked += OnCreateButtonClick;
+            _settingsButton.clicked += OnSettingsButtonClick;
+            _exitButton.clicked += OnExitClick;
+        }
+
+        private void OnConnectButtonClick()
+        {
+        }
+
+        private void OnCreateButtonClick()
+        {
+        }
+
+        private void OnSettingsButtonClick()
+        {
         }
 
         private void OnExitClick()
         {
-            throw new System.NotImplementedException();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
     }
 }

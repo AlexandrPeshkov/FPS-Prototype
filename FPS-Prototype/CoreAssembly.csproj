@@ -56,7 +56,27 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Inftrastructure\Installers\SignalInstaller.cs" />
+    <Compile Include="Assets\Scripts\Common\Constants\SceneNames.cs" />
+    <Compile Include="Assets\Scripts\Inftrastructure\Services\SceneService.cs" />
+    <Compile Include="Assets\Scripts\Common\Signals\LoadSceneSignal.cs" />
+    <Compile Include="Assets\Scripts\UI\LoadingScreen.cs" />
+    <Compile Include="Assets\Scripts\Inftrastructure\Installers\ComponentInstaller.cs" />
+    <Compile Include="Assets\Scripts\Inftrastructure\Services\CoroutineService.cs" />
+    <Compile Include="Assets\Scripts\Inftrastructure\Installers\ServiceInstaller.cs" />
+    <Compile Include="Assets\Scripts\Extensions\UIBehaviourExtensions.cs" />
+    <Compile Include="Assets\Scripts\UI\BaseUIBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Common\Attrubutes\UCSSAttribute.cs" />
+    <Compile Include="Assets\Scripts\Inftrastructure\Startup.cs" />
+    <Compile Include="Assets\Scripts\Scenes\InitialScene\InitialSceneContainer.cs" />
+    <Compile Include="Assets\Scripts\Scenes\MainMenuScene\MainMenuSceneContainer.cs" />
+    <Compile Include="Assets\Scripts\Scenes\MainMenuScene\MainMenuSceneInitializer.cs" />
+    <Compile Include="Assets\Scripts\Scenes\InitialScene\InitialSceneInitializer.cs" />
+    <Compile Include="Assets\Scripts\Scenes\BaseSceneInitializer.cs" />
+    <Compile Include="Assets\Scripts\Common\Interfaces\ISceneSubContainer.cs" />
+    <Compile Include="Assets\Scripts\Scenes\BaseSceneContainer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Scripts\CoreAssembly.asmdef" />
@@ -289,10 +309,22 @@
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.2.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.2.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.5\net35\unity-custom\nunit.framework.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.svermeulen.extenject@9.2.0-stcf3\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.svermeulen.extenject@9.2.0-stcf3\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.svermeulen.extenject@9.2.0-stcf3\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>Library\PackageCache\com.svermeulen.extenject@9.2.0-stcf3\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Library\PackageCache\com.svermeulen.extenject@9.2.0-stcf3\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0b14\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -638,6 +670,12 @@
     </Reference>
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.0b14\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject">
+      <HintPath>Library\ScriptAssemblies\Zenject.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsGameObjectsModule">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsGameObjectsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
