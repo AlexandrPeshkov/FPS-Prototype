@@ -1,35 +1,52 @@
-using FPSPrototype.Core.Common.Attrubutes;
-using FPSPrototype.Core.UI;
+using FPSPrototype.Common.Constants;
+using FPSPrototype.Common.Signals;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Zenject;
 
 namespace FPSPrototype.UI
 {
     /// <summary>
     /// Game main menu controller
     /// </summary>
-    [RequireComponent(typeof(UIDocument))]
-    public class MainMenu : BaseUIBehaviour
+    public class MainMenu : MonoBehaviour
     {
+        #region UI
+
         //menu buttons
-        [UCSS("menu-button-connect")]
+        [SerializeField]
+        private Button _testPolygonButton;
+
+        [SerializeField]
         private Button _connectButton;
 
-        [UCSS("menu-button-create")]
+        [SerializeField]
         private Button _createHostButton;
 
-        [UCSS("menu-button-settings")]
+        [SerializeField]
         private Button _settingsButton;
 
-        [UCSS("menu-button-exit")]
+        [SerializeField]
         private Button _exitButton;
 
-        private void OnEnable()
+        #endregion UI
+
+        private SignalBus _signalBus;
+
+        [Inject]
+        private void Construct(SignalBus signalBus)
         {
-            _connectButton.clicked += OnConnectButtonClick;
-            _createHostButton.clicked += OnCreateButtonClick;
-            _settingsButton.clicked += OnSettingsButtonClick;
-            _exitButton.clicked += OnExitClick;
+            _signalBus = signalBus;
+        }
+
+        private void Awake()
+        {
+            _connectButton.onClick.AddListener(OnConnectButtonClick);
+            _createHostButton.onClick.AddListener(OnCreateButtonClick);
+            _settingsButton.onClick.AddListener(OnSettingsButtonClick);
+            _exitButton.onClick.AddListener(OnExitClick);
+
+            _testPolygonButton.onClick.AddListener(OnTestPolygonButtonClick);
         }
 
         private void OnConnectButtonClick()
@@ -42,6 +59,11 @@ namespace FPSPrototype.UI
 
         private void OnSettingsButtonClick()
         {
+        }
+
+        private void OnTestPolygonButtonClick()
+        {
+            _signalBus.AbstractFire(new LoadSceneSignal(SceneNames._testPolygonScene));
         }
 
         private void OnExitClick()

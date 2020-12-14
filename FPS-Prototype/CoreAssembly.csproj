@@ -691,6 +691,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PluginsAssembly.csproj">
+      <Project>{9F0B3E69-D49F-EAAB-20B3-6CFAFBCB26D7}</Project>
+      <Name>PluginsAssembly</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

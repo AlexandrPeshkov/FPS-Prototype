@@ -20,7 +20,7 @@ namespace FPSPrototype.Core.Inftrastructure.Services
 
         private readonly DiContainer _container;
 
-        private string CurrentScene { get; set; } = SceneNames._initialScene;
+        private string CurrentScene { get; set; } = SceneNames._rootScene;
 
         public SceneService(SignalBus signalBus,
             LoadingScreen.Factory loadingScreenFactory,

@@ -19,7 +19,7 @@ namespace FPSPrototype.Core.Inftrastructure
 
         public void Initialize()
         {
-            _signalBus.Fire(new LoadSceneSignal(SceneNames._initialScene));
+            _signalBus.Fire(new LoadSceneSignal(SceneNames._rootScene));
         }
     }
 }

@@ -24,5 +24,9 @@ namespace FPSPrototype.Core.Scenes
         {
             _signalBus.AbstractFire(new LoadSceneSignal(SceneNames._mainMenuScene));
         }
+
+        private void Awake()
+        {
+        }
     }
 }

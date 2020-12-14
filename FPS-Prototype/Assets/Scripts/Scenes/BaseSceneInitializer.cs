@@ -18,7 +18,6 @@ namespace FPSPrototype.Core.Scenes
         private void Construct(DiContainer container)
         {
             _container = container;
-            InitPipeline();
         }
 
         protected virtual void InitPipeline()
@@ -28,6 +27,7 @@ namespace FPSPrototype.Core.Scenes
 
         private void Start()
         {
+            InitPipeline();
             ExecutePipeline();
         }
 

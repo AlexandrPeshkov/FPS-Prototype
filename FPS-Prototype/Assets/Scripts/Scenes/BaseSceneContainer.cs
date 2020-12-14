@@ -4,7 +4,7 @@ using Zenject;
 
 namespace FPSPrototype.Core.Scenes
 {
-    public abstract class BaseSceneContainer : MonoBehaviour, ISceneSubContainer
+    public abstract class BaseSceneContainer : MonoInstaller, ISceneSubContainer
     {
         public abstract void InstallDependencies(DiContainer container);
     }

@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers:
-  - {fileID: 0}
+  _monoInstallers: []
   _installerPrefabs:
   - {fileID: 2063387959165238493, guid: 1213a1d530ee43841879ead7502b9c7a, type: 3}
   - {fileID: 5725091265940768851, guid: fa7e3e8bb7ac465458b195a0e7d0aa62, type: 3}
@@ -64,5 +63,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _parentNewObjectsUnderSceneContext: 0
-  _contractNames: []
+  _contractNames:
+  - Root
   _parentContractNames: []

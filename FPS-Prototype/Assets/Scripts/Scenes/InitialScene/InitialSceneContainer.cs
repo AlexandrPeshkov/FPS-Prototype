@@ -15,7 +15,7 @@ namespace FPSPrototype.Core.Inftrastructure.Installers.SceneContainers
 
         public override void InstallDependencies(DiContainer container)
         {
-            container.Bind<Canvas>().WithId(SceneNames._initialScene).FromInstance(_initialSceneCanvas);
+            container.Bind<Canvas>().WithId(SceneNames._rootScene).FromInstance(_initialSceneCanvas);
         }
     }
 }
